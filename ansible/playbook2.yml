@@ -11,4 +11,4 @@
         update: yes
     
     - name: Docker compose
-      shell: docker compose -f /docker-swarm-demo/docker-compose.yml up -d
+      shell: docker-compose -f /docker-swarm-demo/docker-compose.yml up -d
