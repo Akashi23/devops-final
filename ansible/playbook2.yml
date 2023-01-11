@@ -1,0 +1,14 @@
+---
+- name: docker-compose
+  hosts: all
+  remote_user: root
+  tasks:
+    - name: Clone a github repository
+      git:
+        repo: https://github.com/lsapan/docker-swarm-demo.git
+        dest: /
+        clone: yes
+        update: yes
+    
+    - name: Docker compose
+      shell: docker compose -f /docker-swarm-demo/docker-compose.yml up -d
